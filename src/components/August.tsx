@@ -14,6 +14,12 @@ const pages = [
 
 const August = () => {
   const [currentPage, setCurrentPage] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    setIsLoading(true);
+  };
   return (
     <div>
       <div className="flex flex-row justify-between items-center">
@@ -23,14 +29,14 @@ const August = () => {
         <div className="flex justify-center space-x-4 m-4">
           <button
             className="btn btn-primary"
-            onClick={() => setCurrentPage((prev) => prev - 1)}
+            onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 0}
           >
             &lt;- Previous
           </button>
           <button
             className="btn btn-primary"
-            onClick={() => setCurrentPage((prev) => prev + 1)}
+            onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === pages.length - 1}
           >
             Next -&gt;
@@ -40,19 +46,28 @@ const August = () => {
           <h2 className="text-2xl font-bold">Page {currentPage + 1}</h2>
         </div>
       </div>
+      <div className="flex justify-center space-x-4 m-4">
+        {isLoading && <span className="loading loading-lg "></span>}
+      </div>
 
-      <Image src={pages[currentPage]} alt="August" width={1000} height={1000} />
+      <Image
+        src={pages[currentPage]}
+        alt="August"
+        width={1000}
+        height={1000}
+        onLoad={() => setIsLoading(false)}
+      />
       <div className="flex justify-center space-x-4 m-4">
         <button
           className="btn btn-primary"
-          onClick={() => setCurrentPage((prev) => prev - 1)}
+          onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 0}
         >
           &lt;- Previous
         </button>
         <button
           className="btn btn-primary"
-          onClick={() => setCurrentPage((prev) => prev + 1)}
+          onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === pages.length - 1}
         >
           Next -&gt;
