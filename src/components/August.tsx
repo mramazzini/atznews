@@ -56,6 +56,7 @@ const August = () => {
         width={1000}
         height={1000}
         onLoad={() => setIsLoading(false)}
+        className={isLoading ? "hidden" : ""}
       />
       <div className="flex justify-center space-x-4 m-4">
         <button
