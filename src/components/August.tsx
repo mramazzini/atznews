@@ -47,7 +47,11 @@ const August = () => {
         </div>
       </div>
       <div className="flex justify-center space-x-4 m-4">
-        {isLoading && <span className="loading loading-lg "></span>}
+        {isLoading ? (
+          <span className=" h-6 loading "></span>
+        ) : (
+          <span className="h-6"></span>
+        )}
       </div>
 
       <Image
@@ -56,7 +60,7 @@ const August = () => {
         width={1000}
         height={1000}
         onLoad={() => setIsLoading(false)}
-        className={isLoading ? "hidden" : ""}
+        className={isLoading ? "opacity-0" : ""}
       />
       <div className="flex justify-center space-x-4 m-4">
         <button
