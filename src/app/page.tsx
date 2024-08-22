@@ -1,9 +1,12 @@
 import August from "@/components/August";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
     <main className=" p-8">
-      <August />
+      <Suspense fallback={<div>Loading...</div>}>
+        <August />
+      </Suspense>
     </main>
   );
 }

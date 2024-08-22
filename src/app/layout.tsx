@@ -32,10 +32,10 @@ export default function RootLayout({
       <body
         className={`${inter.className} w-screen flex flex-col items-center justify-center bg-base-300`}
       >
-        <main className="w-full max-w-[1800px] bg-base-300 z-[1] font-mont">
+        <main className="w-full max-w-[1800px] bg-base-300 z-[1] font-mont ">
           {/* <Navbar /> */}
           <div
-            className="flex flex-col items-center"
+            className="flex flex-col items-center min-h-screen"
             // style={{
             //   minHeight: `calc(100vh - ${NAVBAR_REM_HEIGHT}rem)`,
             // }}
