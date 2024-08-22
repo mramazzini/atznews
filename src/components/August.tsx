@@ -1,6 +1,7 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { useState } from "react";
+
 const pages = [
   "/august/page1.svg",
   "/august/page2.svg",
@@ -14,12 +15,38 @@ const pages = [
 
 const August = () => {
   const [currentPage, setCurrentPage] = useState(0);
+  const [loadedImages, setLoadedImages] = useState<boolean[]>(
+    Array(pages.length).fill(false)
+  );
   const [isLoading, setIsLoading] = useState(true);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    setIsLoading(true);
+    if (loadedImages[page]) {
+      setIsLoading(false);
+    } else {
+      setIsLoading(true);
+    }
   };
+
+  useEffect(() => {
+    // Preload all images using the native browser Image constructor
+    pages.forEach((src, index) => {
+      const img = new window.Image();
+      img.src = src;
+      img.onload = () => {
+        setLoadedImages((prev) => {
+          const updated = [...prev];
+          updated[index] = true;
+          return updated;
+        });
+        if (index === currentPage) {
+          setIsLoading(false);
+        }
+      };
+    });
+  }, [currentPage]);
+
   return (
     <div>
       <div className="flex flex-row justify-between items-center">
@@ -57,6 +84,7 @@ const August = () => {
         height={1000}
         onLoad={() => setIsLoading(false)}
       />
+
       <div className="flex justify-center space-x-4 m-4">
         <button
           className="btn btn-primary"
