@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "August 2024 - ATZ Newsletter",
-  description: "Discover the latest news and updates from ATZ. August 2024.",
+  title: "September 2024 - ATZ Newsletter",
+  description: "Discover the latest news and updates from ATZ. September 2024.",
 };
 
 export default function RootLayout({
