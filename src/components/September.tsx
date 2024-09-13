@@ -2,14 +2,14 @@
 import Image from "next/image";
 import { useState } from "react";
 const pages = [
-  "/september/page1.svg",
-  "/september/page2.svg",
-  "/september/page3.svg",
-  "/september/page4.svg",
-  "/september/page5.svg",
-  "/september/page6.svg",
-  "/september/page7.svg",
-  "/september/page8.svg",
+  "https://lh3.googleusercontent.com/d/1-X98jLGcQeTh4S7DETDyQ28GMT00mOip=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/1dt4qqkwm7lAw_iRvdmIoNTDPRP7Xmql5=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/12hHFNO6_G86fWj8__Meoro4eOosVJxVq=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/1C_duMOMUJVxfXb26YWBvWR8w8hG9IYn1=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/1gLjRhUwWkhYE1ywHNtA_wtRnJoz6yNP0=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/1EnJXqa2rIQkVB9fQjJi2xMlErJOenwcJ=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/1WtLu4OIzO-a_-U0z0cj58mt71GE-TDPP=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/1tjbZ0fj1lTAAEN-5YvDllxY5wn7Cq5GC=s2200?authuser=0",
 ];
 
 const September = () => {
