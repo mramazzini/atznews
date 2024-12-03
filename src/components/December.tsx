@@ -2,15 +2,15 @@
 import Image from "next/image";
 import { useState } from "react";
 const pages = [
-  "/december/1.svg",
-  "/december/2.svg",
-  "/december/3.svg",
-  "/december/4.svg",
-  "/december/5.svg",
-  "/december/6.svg",
-  "/december/7.svg",
-  "/december/8.svg",
-  "/december/9.svg",
+  "https://lh3.googleusercontent.com/d/1heIfNmrUdoHe2OLGohyIgqTBVZ-9Ak7U=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/1nvw9cztsr7eEteuUFWS25LWXo2unaBiF=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/1GC7ULFOHHwVirxawYu_N4vQxI0QM2BLx=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/1sSsUom0OPEvaJU4haaoSKKroJGzYXBDT=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/1i_P1sHv-WpsaPi-6vswkotTp0cHW0nY9=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/1tPou8tT8TCYpuhBiQ6nze3Dytn2okh2o=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/15D3P4tpXC0UsH01xFYJiB_D1X0q4D3MU=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/1aZDPz5w1px4v1PB4GoyjP-kRbj1sMvdO=s2200?authuser=0",
+  "https://lh3.googleusercontent.com/d/13newonSzxtzBuvVu8s10nTrSTkBVcTQR=s2200?authuser=0",
 ];
 
 const December = () => {
